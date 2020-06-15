@@ -6,6 +6,7 @@ import photo3 from './img/photo3.PNG'
 export default function Portfolio() {
     return (
         <div className="portfolio">
+            <h1>My Projects</h1>
             <div className="container">
                 <div className="card">
                     <div className="face face1">
