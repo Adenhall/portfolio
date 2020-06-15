@@ -1,38 +1,291 @@
+.home-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background-color:transparent !important;
+  padding: 0!important;
+}
+
 .App {
-  text-align: center;
+  background-color: lightcoral;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Anton', sans-serif;
+ }
+
+ /* Nav fancy Buttons */
+ :root {
+  --base-color: rgba(255, 255, 255, 1);
+  --hover-color: rgba(220, 120, 150, 1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.horizontal {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: relative;
+  width: 200px;
+  height: 80px;
+  margin: 20px;
+  border: 10px solid var(--base-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.horizontal > .text {
+  margin-left: 5%;
+  position: relative;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--hover-color)), color-stop(50%, var(--hover-color)), color-stop(50%, var(--base-color)), to(var(--base-color)));
+  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 200%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-transition: background-position 300ms;
+  transition: background-position 300ms;
+}
+.horizontal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-color);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-transform: scale3d(0, 1, 1);
+          transform: scale3d(0, 1, 1);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+.horizontal:hover .text {
+  background-position: 0 0;
+}
+.horizontal:hover::before {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.vertical {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: relative;
+  width: 200px;
+  height: 80px;
+  margin: 20px;
+  border: 10px solid var(--base-color);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.vertical > .text {
+  margin-left: 12%;
+  position: relative;
+  color: transparent;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--hover-color)), color-stop(50%, var(--hover-color)), color-stop(50%, var(--base-color)), to(var(--base-color)));
+  background-image: linear-gradient(0deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-repeat: repeat;
+  background-size: 100% 200%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-transition: background-position 300ms;
+  transition: background-position 300ms;
+}
+.vertical::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--base-color);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: scale3d(1, 0, 1);
+          transform: scale3d(1, 0, 1);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+.vertical:hover .text {
+  background-position: 0 100%;
+}
+.vertical:hover::before {
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+}
+
+/* END NAV BUTTON */
+
+.profile-pic {
+  border-radius: 50%;
+  width: 300px;
+  animation-name: profile;
+  animation-duration: 1s;
+}
+.navi-bar {
+  
+}
+
+@media all and (max-width: 900px) {
+  .home-page {
+    font-size: 25px;
+  }
+  .profile-pic {
+    width: 150px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes profile {
+  from {
+    transform: scale(0,0)
+  }
+  to {
+    transform: scale(1,1)
+  }
+}
+
+
+.cv {
+  background-color: white;
+  height: 100vh;
+  padding: 20px;
+  width: 50%;
+  box-shadow: rgba(220, 120, 150, 1);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+
+@media all and (max-width: 900px) {
+  .cv > div > h5 > img {
+    display: none;
+  }
+}
+
+
+.portfolio {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: lightcoral;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  font-family: consolas;
+  position: relative;
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .card {
+  background: lightcoral;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+
+.container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.5s;
+}
+
+.container .card .face.face1 {
+  position: relative;
+  background:lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+  border: 1px solid black;
+}
+
+.container .card:hover .face.face1 {
+  background:white;
+  transform: translateY(0);
+}
+
+.container .card .face.face1 .content {
+  opacity: 0.8;
+  transition: 0.8s;
+}
+
+.container .card:hover .face.face1 .content {
+  opacity: 1;
+}
+
+.container .card .face.face1 .content img {
+  max-width: 250px;
+}
+
+.container .card .face.face1 .content h3 {
+  margin: 10px 0 0 ;
+  padding: 0;
+  color: black;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container .card .face.face2 {
+  position: relative;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,0);
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p {
+  margin: 0;
+  padding: 0;
+  width: 200px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container .card .face.face2 .content a {
+  margin: 15px 0 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+  padding: 3px;
+  border: 1px solid #333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
