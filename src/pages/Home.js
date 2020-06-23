@@ -1,11 +1,18 @@
 import React from "react";
 import { Jumbotron} from "react-bootstrap";
 import Typewriter from "typewriter-effect";
+import profile from "./img/profile.jpg"
+import NavMenu from '../components/NavMenu.js'
+
 
 export default function Home() {
   return (
     <Jumbotron className="home-page">
-      <img className="profile-pic" src="https://cdn1.vectorstock.com/i/1000x1000/50/30/user-icon-male-person-symbol-profile-avatar-vector-20715030.jpg" alt="Avatar"></img>
+      <NavMenu navBg="dark"/>
+      <div className="profile-pic">
+        <img src={profile} alt="Avatar"></img>
+      </div>
+      
       <Typewriter
       options={{
         delay: 60,

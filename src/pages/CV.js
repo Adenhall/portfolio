@@ -1,7 +1,8 @@
 import React from "react";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
-import {OverlayTrigger, Tooltip} from 'react-bootstrap'
+import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import NavMenu from '../components/NavMenu.js';
 
 export default function CV() {
   return (
@@ -12,6 +13,7 @@ export default function CV() {
         flexDirection: "column",
       }}
     >
+      <NavMenu navBg="success"/>
       <h1 style={{ fontSize: "80px", padding: "20px" }}>
         <ScrollAnimation animateIn="animate__slideInLeft">
           About Nguyen Minh Quan

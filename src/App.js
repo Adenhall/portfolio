@@ -1,18 +1,19 @@
-import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavMenu from './components/NavMenu.js'
-import Home from './components/Home.js'
-import CV from './components/CV.js'
-import Portfolio from './components/Portfolio.js'
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./pages/Home.js";
+import CV from "./pages/CV.js";
+import Portfolio from "./pages/Portfolio.js";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <NavMenu/>
-      <Home/>
-      <CV/>
-      <Portfolio/>
+      <Switch>
+        <Route path="/cv" component={CV} />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/" component={Home}/>
+      </Switch>
     </div>
   );
 }
