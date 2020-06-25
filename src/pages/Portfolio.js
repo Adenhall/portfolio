@@ -14,7 +14,7 @@ export default function Portfolio() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src={photo1} />
+                <img src={photo1} alt="Alien Twitter" />
                 <h3>Alien Twitter</h3>
               </div>
             </div>
@@ -32,7 +32,7 @@ export default function Portfolio() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src={photo2} />
+                <img src={photo2} alt="Monster Game"/>
                 <h3>Monster Game</h3>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function Portfolio() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src={photo3} />
+                <img src={photo3} alt="Movie Database" />
                 <h3>Movie DB</h3>
               </div>
             </div>

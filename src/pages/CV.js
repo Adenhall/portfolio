@@ -31,6 +31,7 @@ export default function CV() {
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_T%C3%A0i_Ch%C3%ADnh_Marketing.png"
               style={{ width: "100px" }}
+              alt="College"
             />
             <ScrollAnimation
               animateIn="animate__fadeInUp"
@@ -46,6 +47,7 @@ export default function CV() {
             <img
               src="https://cdn.itviec.com/employers/coderschool/logo/social/8p67H9qvrjNV5FNxB5ZEuPoM/Logo-full@2x-1024x800.png"
               style={{ width: "100px" }}
+              alt="CoderSchool"
             />
             <ScrollAnimation
               animateIn="animate__fadeInUp"
@@ -69,6 +71,7 @@ export default function CV() {
             <img
               src="https://dichthuattanviet.com/wp-content/uploads/2019/09/tanvietlogo-1.png"
               style={{ width: "300px" }}
+              alt="Translator"
             />
             <ScrollAnimation
               animateIn="animate__fadeInUp"
@@ -84,6 +87,7 @@ export default function CV() {
             <img
               src="https://apollo.edu.vn/img/logo.png"
               style={{ width: "150px" }}
+              alt="Apollo"
             />
             <ScrollAnimation
               animateIn="animate__fadeInUp"
@@ -115,6 +119,7 @@ export default function CV() {
               <img
               src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
               style={{ width: "80px" }}
+              alt="HTML5"
             />
             </OverlayTrigger>
           </ScrollAnimation>
@@ -128,6 +133,7 @@ export default function CV() {
               <img
               src="https://w7.pngwing.com/pngs/509/571/png-transparent-cascading-style-sheets-logo-css3-html-web-development-world-wide-web-blue-angle-web-design.png"
               style={{ width: "80px" }}
+              alt="CSS"
             />
             </OverlayTrigger>
             
@@ -142,6 +148,7 @@ export default function CV() {
               <img
               src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
               style={{ width: "80px" }}
+              alt="Javascript"
             />
             </OverlayTrigger>
             
@@ -156,6 +163,7 @@ export default function CV() {
               <img
               src="https://cdn.worldvectorlogo.com/logos/react.svg"
               style={{ width: "80px" }}
+              alt="React"
             />
             </OverlayTrigger>
             
@@ -170,6 +178,7 @@ export default function CV() {
               <img
               src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
               style={{ width: "80px" }}
+              alt="NodeJs"
             />
             </OverlayTrigger>
             
