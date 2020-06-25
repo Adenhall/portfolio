@@ -34,7 +34,7 @@ export default function NavMenu(props) {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link className="horizontal" href="/contact">
-                <span className="text">Hit me up</span>
+                <span className="text">Contact</span>
               </Nav.Link>
             </Nav.Item>
           </Nav>
