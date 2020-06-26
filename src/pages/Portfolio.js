@@ -3,6 +3,10 @@ import photo1 from "./img/photo1.PNG";
 import photo2 from "./img/photo2.PNG";
 import photo3 from "./img/photo3.PNG";
 import NavMenu from "../components/NavMenu.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+const github = <FontAwesomeIcon icon={faGithub} />;
 
 export default function Portfolio() {
   return (
@@ -25,6 +29,7 @@ export default function Portfolio() {
                   in some of our own ideas.
                 </p>
                 <a href="https://alien-twitter.netlify.app/">View it</a>
+                <a href="https://github.com/eatmoarrice/twitter">{github}</a>
               </div>
             </div>
           </div>
@@ -32,7 +37,7 @@ export default function Portfolio() {
           <div className="card">
             <div className="face face1">
               <div className="content">
-                <img src={photo2} alt="Monster Game"/>
+                <img src={photo2} alt="Monster Game" />
                 <h3>Monster Game</h3>
               </div>
             </div>
@@ -45,6 +50,7 @@ export default function Portfolio() {
                 <a href="https://nguyen-quan-monster-frenzy.netlify.app/">
                   View it
                 </a>
+                <a href="https://github.com/Adenhall/MonsterHunt">{github}</a>
               </div>
             </div>
           </div>
@@ -60,6 +66,7 @@ export default function Portfolio() {
               <div className="content">
                 <p>This is for my API fetching training. Ignore the porns...</p>
                 <a href="https://movieeeee.netlify.app/">View it</a>
+                <a href="https://github.com/Adenhall/MovieProject">{github}</a>
               </div>
             </div>
           </div>
