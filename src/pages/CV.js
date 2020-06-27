@@ -137,7 +137,7 @@ export default function CV() {
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="3">
               <Card.Body>
-                <div className="d-flex flex-row justify-content-around">
+                <div className="d-flex flex-row justify-content-around flex-wrap">
                   <OverlayTrigger
                     key="bottom"
                     placement="bottom"
