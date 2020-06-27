@@ -15,8 +15,7 @@ import {
   OverlayTrigger,
   Tooltip,
   Accordion,
-  Card,
-  Button,
+  Card
 } from "react-bootstrap";
 import NavMenu from "../components/NavMenu.js";
 
