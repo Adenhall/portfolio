@@ -8,7 +8,7 @@ import NavMenu from '../components/NavMenu.js'
 export default function Home() {
   return (
     <Jumbotron className="home-page">
-      <NavMenu navBg="dark"/>
+      <NavMenu navBg="bg-home-nav"/>
       <div className="profile-pic">
         <img src={profile} alt="Avatar"></img>
       </div>

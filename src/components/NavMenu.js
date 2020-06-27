@@ -8,7 +8,7 @@ export default function NavMenu(props) {
         fixed="top"
         collapseOnSelect
         expand="lg"
-        bg={props.navBg}
+        className={props.navBg}
         variant="dark"
       >
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

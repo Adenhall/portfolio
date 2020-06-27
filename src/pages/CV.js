@@ -41,7 +41,7 @@ const database = (
 export default function CV() {
   return (
     <div className="cv">
-      <NavMenu navBg="success" />
+      <NavMenu navBg="bg-cv-nav" />
       <Accordion className="cv-sections" defaultActiveKey="0">
         <ScrollAnimation animateIn="animate__slideInLeft">
           <Card className="cv-cards">

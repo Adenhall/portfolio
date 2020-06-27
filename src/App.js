@@ -5,7 +5,7 @@ import Home from "./pages/Home.js";
 import CV from "./pages/CV.js";
 import Portfolio from "./pages/Portfolio.js";
 import { Switch, Route } from "react-router-dom";
-import Contact from "./pages/Contact";
+import Contact from "./pages/Contact.js";
 
 function App() {
   return (
