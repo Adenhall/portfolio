@@ -11,7 +11,7 @@ const github = <FontAwesomeIcon icon={faGithub} />;
 export default function Portfolio() {
   return (
     <div>
-      <NavMenu navBg="danger" />
+      <NavMenu navBg="primary" />
       <div className="portfolio">
         <h1>My Projects</h1>
         <div className="container">

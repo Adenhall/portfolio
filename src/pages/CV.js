@@ -1,190 +1,216 @@
 import React from "react";
 import "animate.css/animate.min.css";
 import ScrollAnimation from "react-animate-on-scroll";
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
-import NavMenu from '../components/NavMenu.js';
+import {
+  faHtml5,
+  faCss3Alt,
+  faJs,
+  faReact,
+  faNodeJs,
+} from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  OverlayTrigger,
+  Tooltip,
+  Accordion,
+  Card,
+  Button,
+} from "react-bootstrap";
+import NavMenu from "../components/NavMenu.js";
+
+const html = (
+  <FontAwesomeIcon icon={faHtml5} size="6x" style={{ color: "blue" }} />
+);
+const css = (
+  <FontAwesomeIcon icon={faCss3Alt} size="6x" style={{ color: "orange" }} />
+);
+const js = (
+  <FontAwesomeIcon icon={faJs} size="6x" style={{ color: "#fdcb6e" }} />
+);
+const react = (
+  <FontAwesomeIcon icon={faReact} size="6x" style={{ color: "cyan" }} />
+);
+const nodeJs = (
+  <FontAwesomeIcon icon={faNodeJs} size="6x" style={{ color: "#00b894" }} />
+);
+const database = (
+  <FontAwesomeIcon icon={faDatabase} size="6x" style={{ color: "#55efc4" }} />
+);
 
 export default function CV() {
   return (
-    <div
-      style={{
-        backgroundColor: "white",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
-      <NavMenu navBg="success"/>
-      <h1 style={{ fontSize: "80px", padding: "20px" }}>
+    <div className="cv">
+      <NavMenu navBg="success" />
+      <Accordion className="cv-sections" defaultActiveKey="0">
         <ScrollAnimation animateIn="animate__slideInLeft">
-          About Nguyen Minh Quan
+          <Card className="cv-cards">
+            <Accordion.Toggle
+              as={Card.Header}
+              variant="text"
+              eventKey="0"
+              style={{ cursor: "pointer" }}
+            >
+              <h1>PROFILE</h1>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>
+                Enthusiastic Full-stack Web Developer from three months of
+                highly intense programming boot-camp with many individual and
+                group projects. Adept at making and designing websites and web
+                applications using HTML, CSS, JavaScript, React, NodeJs and
+                MongoDB. A calm and focused individual, with the ability to
+                multitask and work well under pressure. Extremely compatible
+                working in teams and dedicated to improving own abilities and
+                standards.{" "}
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
         </ScrollAnimation>
-      </h1>
-
-      <div className="shadow-lg p-3 mb-5 bg-white rounded cv">
-        <h1 style={{ color: "lightcoral" }}>
-          <ScrollAnimation animateIn="animate__fadeInUp">
-            Education
-          </ScrollAnimation>
-        </h1>
-        <div className="d-flex justify-content-between flex-wrap">
-          <h5 className="d-flex">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Logo_Tr%C6%B0%E1%BB%9Dng_%C4%90%E1%BA%A1i_H%E1%BB%8Dc_T%C3%A0i_Ch%C3%ADnh_Marketing.png"
-              style={{ width: "100px" }}
-              alt="College"
-            />
-            <ScrollAnimation
-              animateIn="animate__fadeInUp"
-              style={{ marginTop: "20px", marginLeft: "10px" }}
+        <ScrollAnimation animateIn="animate__slideInLeft">
+          <Card className="cv-cards">
+            <Accordion.Toggle
+              as={Card.Header}
+              variant="text"
+              eventKey="1"
+              style={{ cursor: "pointer" }}
             >
-              University of Finance - Marketing
-              <br />
-              2017 - Now <br />
-              Foreign Trade
-            </ScrollAnimation>
-          </h5>
-          <h5 className="d-flex">
-            <img
-              src="https://cdn.itviec.com/employers/coderschool/logo/social/8p67H9qvrjNV5FNxB5ZEuPoM/Logo-full@2x-1024x800.png"
-              style={{ width: "100px" }}
-              alt="CoderSchool"
-            />
-            <ScrollAnimation
-              animateIn="animate__fadeInUp"
-              style={{ marginTop: "20px", marginLeft: "10px" }}
+              <h1>EDUCATION</h1>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body>
+                <h5>Fullstack Web Developer, Coder School, Ho Chi Minh</h5>
+                <p>April 2020 - July 2020</p>
+                <ul>
+                  <li>Intense course to improve one's knowledge in coding</li>
+                  <li>Frequently building individual and group projects</li>
+                  <li>Practice Agile methodology</li>
+                  <li>
+                    Get disciplined and familiar with IT working environment
+                  </li>
+                </ul>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__slideInLeft">
+          <Card className="cv-cards">
+            <Accordion.Toggle
+              as={Card.Header}
+              variant="text"
+              eventKey="2"
+              style={{ cursor: "pointer" }}
             >
-              Coder School
-              <br />
-              05/2020 - Now <br />
-              Fullstack Web Developer
-            </ScrollAnimation>
-          </h5>
-        </div>
-        <div style={{ borderTop: "1px solid black" }}></div>
-        <h1 style={{ color: "lightcoral" }}>
-          <ScrollAnimation animateIn="animate__fadeInUp">
-            Work history
-          </ScrollAnimation>
-        </h1>
-        <div className="d-flex justify-content-between flex-wrap">
-          <h5 className="d-flex flex-column">
-            <img
-              src="https://dichthuattanviet.com/wp-content/uploads/2019/09/tanvietlogo-1.png"
-              style={{ width: "300px" }}
-              alt="Translator"
-            />
-            <ScrollAnimation
-              animateIn="animate__fadeInUp"
-              style={{ marginTop: "20px", marginLeft: "10px" }}
+              <h1>EMPLOYMENT HISTORY</h1>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="2">
+              <Card.Body>
+                <h5>Teaching Assistant, Apollo English, Ho Chi Minh</h5>
+                <p>June 2019 - March 2020</p>
+                <ul>
+                  <li>
+                    Excellent environment to learn and improve the 4'Cs:
+                    Critical Thinking, Creativity, Collaboration, Communication
+                  </li>
+                  <li>
+                    Able to greatly improve one's capability in foreign
+                    languages
+                  </li>
+                  <li>
+                    Brought forth an exceptional work ethic and commitment to
+                    company values.
+                  </li>
+                </ul>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="animate__slideInLeft">
+          <Card className="cv-cards">
+            <Accordion.Toggle
+              as={Card.Header}
+              variant="text"
+              eventKey="3"
+              style={{ cursor: "pointer" }}
             >
-              Tan Viet translation
-              <br />
-              2017 - 2018 <br />
-              Translator
-            </ScrollAnimation>
-          </h5>
-          <h5 className="d-flex">
-            <img
-              src="https://apollo.edu.vn/img/logo.png"
-              style={{ width: "150px" }}
-              alt="Apollo"
-            />
-            <ScrollAnimation
-              animateIn="animate__fadeInUp"
-              style={{ marginTop: "20px", marginLeft: "10px" }}
-            >
-              Apollo English
-              <br />
-              06/2019 - 3/2020 <br />
-              Teaching Assistant
-            </ScrollAnimation>
-          </h5>
-        </div>
-        <h1 style={{ textAlign: "center", marginTop: "50px" }}>
-          <ScrollAnimation
-            animateIn="animate__backInDown"
-            style={{ marginTop: "20px", marginLeft: "10px" }}
-          >
-            My programming languages
-          </ScrollAnimation>
-        </h1>
-        <div className="d-flex align-self-center">
-          <ScrollAnimation
-            animateIn="animate__backInDown"
-            style={{ marginTop: "20px", marginLeft: "10px" }}
-          >
-            <OverlayTrigger
-              overlay={<Tooltip id="tooltip-disabled">HTML5</Tooltip>}
-            >
-              <img
-              src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png"
-              style={{ width: "80px" }}
-              alt="HTML5"
-            />
-            </OverlayTrigger>
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__backInDown"
-            style={{ marginTop: "20px", marginLeft: "10px" }}
-          >
-            <OverlayTrigger
-              overlay={<Tooltip id="tooltip-disabled">CSS</Tooltip>}
-            >
-              <img
-              src="https://w7.pngwing.com/pngs/509/571/png-transparent-cascading-style-sheets-logo-css3-html-web-development-world-wide-web-blue-angle-web-design.png"
-              style={{ width: "80px" }}
-              alt="CSS"
-            />
-            </OverlayTrigger>
-            
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__backInDown"
-            style={{ marginTop: "20px", marginLeft: "10px" }}
-          >
-            <OverlayTrigger
-              overlay={<Tooltip id="tooltip-disabled">Javascript</Tooltip>}
-            >
-              <img
-              src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
-              style={{ width: "80px" }}
-              alt="Javascript"
-            />
-            </OverlayTrigger>
-            
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__backInDown"
-            style={{ marginTop: "20px", marginLeft: "10px" }}
-          >
-            <OverlayTrigger
-              overlay={<Tooltip id="tooltip-disabled">React</Tooltip>}
-            >
-              <img
-              src="https://cdn.worldvectorlogo.com/logos/react.svg"
-              style={{ width: "80px" }}
-              alt="React"
-            />
-            </OverlayTrigger>
-            
-          </ScrollAnimation>
-          <ScrollAnimation
-            animateIn="animate__backInDown"
-            style={{ marginTop: "20px", marginLeft: "10px" }}
-          >
-            <OverlayTrigger
-              overlay={<Tooltip id="tooltip-disabled">NodeJs</Tooltip>}
-            >
-              <img
-              src="https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg"
-              style={{ width: "80px" }}
-              alt="NodeJs"
-            />
-            </OverlayTrigger>
-            
-          </ScrollAnimation>
-        </div>
-      </div>
+              <h1>PROGRAMING SKILLS</h1>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="3">
+              <Card.Body>
+                <div className="d-flex flex-row justify-content-around">
+                  <OverlayTrigger
+                    key="bottom"
+                    placement="bottom"
+                    overlay={
+                      <Tooltip id={`tooltip-bottom`}>
+                        <strong>HTML5</strong>.
+                      </Tooltip>
+                    }
+                  >
+                    <h2>{html}</h2>
+                  </OverlayTrigger>{" "}
+                  <OverlayTrigger
+                    key="bottom"
+                    placement="bottom"
+                    overlay={
+                      <Tooltip id={`tooltip-bottom`}>
+                        <strong>CSS3</strong>.
+                      </Tooltip>
+                    }
+                  >
+                    <h2>{css}</h2>
+                  </OverlayTrigger>{" "}
+                  <OverlayTrigger
+                    key="bottom"
+                    placement="bottom"
+                    overlay={
+                      <Tooltip id={`tooltip-bottom`}>
+                        <strong>JavaScript</strong>.
+                      </Tooltip>
+                    }
+                  >
+                    <h2>{js}</h2>
+                  </OverlayTrigger>{" "}
+                  <OverlayTrigger
+                    key="bottom"
+                    placement="bottom"
+                    overlay={
+                      <Tooltip id={`tooltip-bottom`}>
+                        <strong>React.Js</strong>.
+                      </Tooltip>
+                    }
+                  >
+                    <h2>{react}</h2>
+                  </OverlayTrigger>{" "}
+                  <OverlayTrigger
+                    key="bottom"
+                    placement="bottom"
+                    overlay={
+                      <Tooltip id={`tooltip-bottom`}>
+                        <strong>Node.Js</strong>.
+                      </Tooltip>
+                    }
+                  >
+                    <h2>{nodeJs}</h2>
+                  </OverlayTrigger>{" "}
+                  <OverlayTrigger
+                    key="bottom"
+                    placement="bottom"
+                    overlay={
+                      <Tooltip id={`tooltip-bottom`}>
+                        <strong>MongoDB</strong>.
+                      </Tooltip>
+                    }
+                  >
+                    <h2>{database}</h2>
+                  </OverlayTrigger>{" "}
+                </div>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </ScrollAnimation>
+      </Accordion>
     </div>
   );
 }

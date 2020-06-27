@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: center;
   font-size: 50px;
-  background-color:transparent !important;
-  padding: 0!important;
+  background-color: transparent !important;
+  padding: 0 !important;
 }
 
 .App {
@@ -15,11 +15,11 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Anton', sans-serif;
- }
+  font-family: "Anton", sans-serif;
+}
 
- /* Nav fancy Buttons */
- :root {
+/* Nav fancy Buttons */
+:root {
   --base-color: rgba(255, 255, 255, 1);
   --hover-color: rgba(220, 120, 150, 1);
 }
@@ -28,9 +28,9 @@
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   width: 200px;
   height: 80px;
@@ -44,8 +44,22 @@
   justify-content: center;
   position: relative;
   color: transparent;
-  background-image: -webkit-gradient(linear, left top, right top, from(var(--hover-color)), color-stop(50%, var(--hover-color)), color-stop(50%, var(--base-color)), to(var(--base-color)));
-  background-image: linear-gradient(90deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(var(--hover-color)),
+    color-stop(50%, var(--hover-color)),
+    color-stop(50%, var(--base-color)),
+    to(var(--base-color))
+  );
+  background-image: linear-gradient(
+    90deg,
+    var(--hover-color) 0%,
+    var(--hover-color) 50%,
+    var(--base-color) 50%,
+    var(--base-color) 100%
+  );
   background-repeat: repeat;
   background-size: 200%;
   background-position: 100% 0;
@@ -55,7 +69,7 @@
   transition: background-position 300ms;
 }
 .horizontal::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -63,9 +77,9 @@
   height: 100%;
   background: var(--base-color);
   -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
+  transform-origin: 100% 0;
   -webkit-transform: scale3d(0, 1, 1);
-          transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
   -webkit-transition: -webkit-transform 300ms;
   transition: -webkit-transform 300ms;
   transition: transform 300ms;
@@ -76,18 +90,18 @@
 }
 .horizontal:hover::before {
   -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transform-origin: 0 0;
   -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
 }
 
 .vertical {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   position: relative;
   width: 200px;
   height: 80px;
@@ -101,8 +115,22 @@
   justify-content: center;
   position: relative;
   color: transparent;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(var(--hover-color)), color-stop(50%, var(--hover-color)), color-stop(50%, var(--base-color)), to(var(--base-color)));
-  background-image: linear-gradient(0deg, var(--hover-color) 0%, var(--hover-color) 50%, var(--base-color) 50%, var(--base-color) 100%);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(var(--hover-color)),
+    color-stop(50%, var(--hover-color)),
+    color-stop(50%, var(--base-color)),
+    to(var(--base-color))
+  );
+  background-image: linear-gradient(
+    0deg,
+    var(--hover-color) 0%,
+    var(--hover-color) 50%,
+    var(--base-color) 50%,
+    var(--base-color) 100%
+  );
   background-repeat: repeat;
   background-size: 100% 200%;
   background-position: 0 0;
@@ -112,7 +140,7 @@
   transition: background-position 300ms;
 }
 .vertical::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -120,9 +148,9 @@
   height: 100%;
   background: var(--base-color);
   -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
+  transform-origin: 0 0;
   -webkit-transform: scale3d(1, 0, 1);
-          transform: scale3d(1, 0, 1);
+  transform: scale3d(1, 0, 1);
   -webkit-transition: -webkit-transform 300ms;
   transition: -webkit-transform 300ms;
   transition: transform 300ms;
@@ -133,9 +161,9 @@
 }
 .vertical:hover::before {
   -webkit-transform-origin: 0 100%;
-          transform-origin: 0 100%;
+  transform-origin: 0 100%;
   -webkit-transform: scale3d(1, 1, 1);
-          transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
 }
 
 /* END NAV BUTTON */
@@ -156,56 +184,52 @@
   top: -5rem;
 }
 
-
-@media all and (max-width: 900px) {
-  .home-page {
-    font-size: 25px;
-  }
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-  }
-  .profile-pic > img {
-    width: 200px;
-    left: 0rem;
-    top: -4rem;
-  }
-}
-
 @keyframes profile {
   from {
-    transform: scale(0,0)
+    transform: scale(0, 0);
   }
   to {
-    transform: scale(1,1)
+    transform: scale(1, 1);
   }
 }
-
 
 .cv {
   background-color: white;
-  /* height: 100vh;
-  padding: 20px;
-  width: 50%; */
-  /* box-shadow: rgba(220, 120, 150, 1); */
+  padding-left: 4rem;
+  padding-right: 4rem;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-self: center;
 }
 
-@media all and (max-width: 900px) {
-  .cv > div > h5 > img {
-    display: none;
-  }
+.cv-sections {
+  position: relative;
+  top: 10rem;
 }
 
+.cv-cards {
+  margin-bottom: 100px;
+}
+
+.cv-cards * h1 {
+  color: #00b894;
+  text-decoration: none;
+}
+
+
+@media all and (max-width: 900px) {
+  .cv {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 .portfolio {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: lightcoral;
+  background: #dfe6e9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,6 +237,7 @@
   font-family: consolas;
   position: relative;
   padding: 10px;
+  top: 8rem;
 }
 
 .container {
@@ -223,7 +248,7 @@
 }
 
 .container .card {
-  background: lightcoral;
+  background: #dfe6e9;
   position: relative;
   cursor: pointer;
   border: none;
@@ -237,7 +262,7 @@
 
 .container .card .face.face1 {
   position: relative;
-  background: coral;
+  background: #74b9ff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -247,7 +272,7 @@
 }
 
 .container .card:hover .face.face1 {
-  background:white;
+  background: white;
   transform: translateY(0);
 }
 
@@ -265,7 +290,7 @@
 }
 
 .container .card .face.face1 .content h3 {
-  margin: 10px 0 0 ;
+  margin: 10px 0 0;
   padding: 0;
   color: black;
   text-align: center;
@@ -280,7 +305,7 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 0 20px 50px rgba(0,0,0,0);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0);
   transform: translateY(-100px);
 }
 
@@ -304,6 +329,25 @@
   padding: 3px;
   border: 1px solid #333;
 }
+
+@media all and (max-width: 900px) {
+  .home-page {
+    font-size: 25px;
+  }
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+  .profile-pic > img {
+    width: 200px;
+    left: 0rem;
+    top: -4rem;
+  }
+  .portfolio {
+    top: 3rem;
+  }
+}
+
 
 @media all and (max-width: 1240px) {
   .container {

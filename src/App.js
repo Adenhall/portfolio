@@ -5,6 +5,7 @@ import Home from "./pages/Home.js";
 import CV from "./pages/CV.js";
 import Portfolio from "./pages/Portfolio.js";
 import { Switch, Route } from "react-router-dom";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Switch>
         <Route path="/cv" component={CV} />
         <Route path="/portfolio" component={Portfolio} />
+        <Route path="/contact" component={Contact}/>
         <Route path="/" component={Home}/>
       </Switch>
     </div>
